@@ -19,13 +19,13 @@ pygame.mixer.init()
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 #sprite bank
 
-rightWalk = pygame.surface.Surface((32,32))
-leftwalk = pygame.surface.Surface((32,32))
+rightWalk = pygame.surface.Surface((32,32), pygame.SRCALPHA)
+leftwalk = pygame.surface.Surface((32,32),pygame.SRCALPHA)
 background = pygame.image.load('background.png')
 
 temp = pygame.image.load('right.png')
 rightWalk.blit(temp,(0,0))
-rightWalk.convert_alpha()
+
 temp = pygame.image.load('left.png')
 leftwalk.blit(temp,(0,0))
 leftwalk.convert_alpha()
